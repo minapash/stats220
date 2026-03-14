@@ -1,6 +1,6 @@
 # stats220
 ![](https://media.tenor.com/XLwkPdamUikAAAAi/hello-kitty.gif)
-This is my repo for STATS 220. 
+\nThis is my repo for STATS 220. 
 
 **A little about me:**
 
