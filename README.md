@@ -14,6 +14,9 @@ This is my repo for STATS 220.
 2. Lychee
 3. Watermelon
 
-A meme that captures how I currently feel about my university studies is ![](https://media.tenor.com/3Jfatv-wjJwAAAAi/pengu-pudgy.gif)
-
 I like to listen to calm music when studying, I recently discovered this [YouTube channel](https://www.youtube.com/@HuyLePianoMusic)
+
+A meme that captures how I currently feel about my university studies is:
+![](https://media.tenor.com/3Jfatv-wjJwAAAAi/pengu-pudgy.gif)
+
+
