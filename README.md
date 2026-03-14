@@ -10,9 +10,9 @@ Hi I'm Mina, this is my repo for STATS 220.
 - I am interested in learning about data technologies.
 
 ## My fave fruits:
-1. Strawberries
-2. Lychee
-3. Watermelon
+   1. Strawberries
+   2. Lychee
+   3. Watermelon
    
 
 I like to listen to calm music when studying, I recently discovered this [YouTube channel](https://www.youtube.com/@HuyLePianoMusic)
@@ -20,6 +20,6 @@ I like to listen to calm music when studying, I recently discovered this [YouTub
 
 A meme that captures how I currently feel about my university studies is:
 
-![](https://media.tenor.com/3Jfatv-wjJwAAAAi/pengu-pudgy.gif)
+   ![](https://media.tenor.com/8MFAXaqmyfkAAAAi/cats.gif)
 
 
