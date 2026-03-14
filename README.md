@@ -1,9 +1,9 @@
 # stats220
 ![](https://media.tenor.com/XLwkPdamUikAAAAi/hello-kitty.gif)
 
-Hi I'm Mina, this is my repo for STATS 220. 
+**Hi I'm Mina, this is my repo for STATS 220.**
 
-**A little about me:**
+## A little about me: 
 
 - I am undertaking a degree in computer science and statistics.
 - I am taking STATS 220 because: I don't remember honestly, *probably* more relevant than the stage II courses I didn't choose.
