@@ -23,3 +23,4 @@ A meme that captures how I currently feel about my university studies is:
    ![](https://media.tenor.com/8MFAXaqmyfkAAAAi/cats.gif)
 
 
+https://github.com/minapash/stats220/blob/main/README.md
