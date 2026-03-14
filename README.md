@@ -1,5 +1,5 @@
 # stats220
-![](https://media1.tenor.com/m/aLdizX4pJbIAAAAd/apple-cat.gif)
+![](https://media.tenor.com/XLwkPdamUikAAAAi/hello-kitty.gif)
 This is my repo for STATS 220. 
 
 **A little about me:**
@@ -13,6 +13,6 @@ This is my repo for STATS 220.
 2. Lychee
 3. Watermelon
 
-A meme that captures how I currently feel about my university studies is ![](https://media1.tenor.com/m/t98IZ16DS5YAAAAC/pingu-tired.gif)
+A meme that captures how I currently feel about my university studies is ![](https://media.tenor.com/3Jfatv-wjJwAAAAi/pengu-pudgy.gif)
 
 I like to listen to calm music when studying, I recently discovered this [YouTube channel](https://www.youtube.com/@HuyLePianoMusic)
