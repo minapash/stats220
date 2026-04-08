@@ -1,0 +1,108 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+library(tidyverse)
+
+```
+
+```{css}
+body {
+  background-color: #efdaf5;
+  font-family: Arial;
+}
+
+h2 {
+  color: #3f184a;
+}
+
+```
+
+
+
+## Analysis of TikTok Advertisement Engagement
+This report analyses engagement with TikTok advertisements observed during scrolling. The collected data includes both platform-sponsored advertisements ('TikTok Advertisements') and influencer promotions. The purpose is to understand how users interact with ads and how engaging they are.
+
+```{r}
+logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vRz4SxSIiSg_jKGaojjD_Nny5nSs0IAC5ONMmZ_LsrKR1HsBe195CWzS1q0ha1EtY68U6KFPZzLcUHk/pub?output=csv")
+```
+
+```{r}
+latest_data <- logged_data %>%
+  rename(
+    ad_type = 2,
+    category = 3,
+    watch_time = 4,
+    engagement = 5,
+    interest = 6
+  ) %>%
+  mutate(
+    engagement = if_else(
+      engagement == "Took further action (e.g clicked, liked, comment, viewed profile, searched)",
+      "Took further action",
+      engagement
+    ),
+    ad_type_clean = case_when(
+      ad_type == "TikTok Advertisement" ~ "Sponsored TikTok ad",
+      ad_type == "Content Creator promotion" ~ "Influencer promotion",
+      TRUE ~ ad_type
+    ),
+    engagement = factor(
+      engagement,
+      levels = c(
+        "Skipped immediately",
+        "Watched partially",
+        "Watched fully",
+        "Took further action"
+      )
+    )
+  )
+```
+
+```{r}
+mean_watch <- latest_data$watch_time %>%
+  mean(na.rm = TRUE) %>%
+  round(1)
+
+prop_skip <- latest_data$engagement %>%
+  (\(x) mean(x == "Skipped immediately"))()
+```
+
+The average time spent watching TikTok ads was `r mean_watch` seconds.
+
+Approximately `r round(prop_skip*100,1)`% of ads were skipped immediately, indicating generally low engagement.
+
+```{r}
+latest_data %>%
+  ggplot() +
+  geom_bar(aes(x = engagement), fill = "#3f184a") +
+  labs(
+    title = "Distribution of Engagement with TikTok Advertisements",
+    x = "Engagement type",
+    y = "Number of ads"
+  ) +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1))
+```
+
+```{r}
+latest_data %>%
+  ggplot() +
+  geom_bar(aes(x = engagement, fill = ad_type_clean)) +
+  labs(
+    title = "Comparison of Engagement by Advertisement Type",
+    x = "Engagement",
+    y = "Number of ads",
+    fill = "Ad type"
+  ) +
+  scale_fill_manual(values = c(
+    "Sponsored TikTok ad" = "#4b2a54",
+    "Influencer promotion" = "#ad96b3"
+  )) +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1))
+```
+
+This suggests that users tend to skip advertisements quickly, limiting overall engagement. It also suggests influencer promotions tend to generate more engagement compared to standard TikTok advertisements, as users are more likely to watch or interact with them.
